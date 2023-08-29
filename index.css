@@ -71,6 +71,12 @@ header {
     align-items: center;
     border-bottom: 1px solid #bcbcbc;
     padding: 4px 8px;
+    transition: background-color 200ms;
+}
+
+.radio:hover,
+.radio:active {
+    background-color: #b698704d;
 }
 
 .radio:first-child {
@@ -102,7 +108,7 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-.get-image-btn{
+.get-image-btn {
     background-color: #1d1d1d;
     color: #b69870;
     padding: 15px 19px;
@@ -111,6 +117,13 @@ input[type="radio"] {
     border-radius: 5px;
     margin-bottom: 8px;
     margin-top: 16px;
+    transition: background-color 150ms, color 150ms;
+}
+
+.get-image-btn:hover,
+.get-image-btn:active {
+    background-color: #b69870;
+    color: #1d1d1d;
 }
 
 /* modal */
