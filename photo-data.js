@@ -145,7 +145,7 @@ export const photoData = [
         alt: "Pies leży pod łóżkiem w legowisku",
     },
     {
-        tags: ["odpoczynek-spacer-1"],
+        tags: ["odpoczynek", "spacer"],
         image: "odpoczynek-spacer-1.jpg",
         alt: "Pies leży na trawie i śpi",
     },
