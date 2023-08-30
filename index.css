@@ -146,8 +146,7 @@ input[type="radio"] {
 }
 
 .dog-img {
-    max-width: 340px;
-    max-height: 420px;
+    max-width: 75vw;
     margin: 20px;
     object-fit: cover;
     border: 1px solid #1d1d1db0;
