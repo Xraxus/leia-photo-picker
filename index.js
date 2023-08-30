@@ -4,11 +4,14 @@ const tagRadios = document.getElementById("tag-radios");
 const getImageBtn = document.getElementById("get-image-btn");
 const photoModal = document.getElementById("photo-modal");
 const photoModalInner = document.getElementById("photo-modal-inner");
-const photoModalCloseBtn = document.getElementById("photo-modal-close-btn");
+const controlsContainer = document.getElementById("controls-container");
 
 tagRadios.addEventListener("change", highlightCheckedOption);
 getImageBtn.addEventListener("click", renderDogPhoto);
-photoModalCloseBtn.addEventListener("click", closePhotoModal);
+controlsContainer.addEventListener("submit", function (e) {
+    // To stop form from refreshing on submit
+    e.preventDefault();
+});
 
 document.addEventListener("click", function (event) {
     if (
@@ -55,7 +58,6 @@ function getSinglePhoto() {
 }
 
 function getMatchingPhotosArray() {
-    document.querySelector('input[type="radio"]:checked');
     const selectedTag = document.querySelector(
         'input[type="radio"]:checked'
     ).value;
@@ -78,7 +80,8 @@ function renderTagRadios(photoData) {
                 type="radio"
                 id="${tag}"
                 value="${tag}"
-                name="tags">
+                name="tags"
+                required>
                 </div>
                 `;
     }
